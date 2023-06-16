@@ -4,13 +4,13 @@ const Get = () => {
   const [posts, setPosts] = useState();
 
   const getData = () =>
-    fetch("/api/posts")
+    fetch("https://boards-db.vercel.app/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((e) => console.log(e));
 
   const postData = () =>
-    fetch("/api/posts", {
+    fetch("https://boards-db.vercel.app/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
