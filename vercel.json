@@ -2,7 +2,7 @@
     "rewrites": [
         { 
             "source": "/api/(.*)", 
-            "destination": "https://boards-db.vercel.app" 
+            "destination": "https://boards-db.vercel.app/posts" 
         }
     ]
 }
