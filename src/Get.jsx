@@ -4,13 +4,13 @@ const Get = () => {
   const [posts, setPosts] = useState();
 
   const getData = () =>
-    fetch("https://boards-db.vercel.app/posts")
+    fetch("api/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((e) => console.log(e));
 
   const postData = () =>
-    fetch("https://boards-db.vercel.app/posts", {
+    fetch("api/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +23,7 @@ const Get = () => {
       <button onClick={getData}>Get</button>
       <button onClick={postData}>Post</button>
       <ul>
-        { posts && posts.map((post) => <li key={post.id}>{post.id}</li>) }
+        { posts && posts.map((post) => <li key={post.id}>{post.id}</li>)}
       </ul>
     </>
   );
