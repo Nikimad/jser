@@ -1,17 +1,16 @@
-import { useEffect } from "react";
 import { useState } from "react";
 
 const Get = () => {
   const [posts, setPosts] = useState();
 
   const getData = () =>
-    fetch("http://127.0.0.1:5173/api/posts")
+    fetch("/api/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((e) => console.log(e));
 
   const postData = () =>
-    fetch("http://127.0.0.1:5173/api/posts", {
+    fetch("/api/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
