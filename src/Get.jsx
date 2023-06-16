@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Get = () => {
   const [posts, setPosts] = useState();
@@ -18,13 +18,14 @@ const Get = () => {
       body: JSON.stringify({}),
     });
 
+  useEffect(() => {
+    console.log(posts);
+  }, [posts])
+
   return (
     <>
       <button onClick={getData}>Get</button>
       <button onClick={postData}>Post</button>
-      <ul>
-        { posts && posts.map((post) => <li key={post.id}>{post.id}</li>)}
-      </ul>
     </>
   );
 };
