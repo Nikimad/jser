@@ -5,12 +5,13 @@ import svgr from "vite-plugin-svgr";
 export default defineConfig({
   server: {
     proxy: {
-      '/api': {
-        target: 'https://boards-db.vercel.app',
+      "/api": {
+        target: "https://boards-db.vercel.app",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     }
   },
   plugins: [svgr(), react()],
+  
 });
