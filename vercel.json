@@ -1,8 +1,8 @@
 {
     "rewrites": [
         { 
-            "source": "/api/*", 
-            "destination": "https://boards-db.vercel.app/*" 
+            "source": "/api/(.*)", 
+            "destination": "https://boards-db.vercel.app/(.*)" 
         }
     ]
 }
