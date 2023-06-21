@@ -4,6 +4,5 @@ import Get from "./Get";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Get />
   </React.StrictMode>
 );
