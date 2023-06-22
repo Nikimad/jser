@@ -3,6 +3,7 @@
     {
       "source": "/api/:path*",
       "destination": "https://express-test-server.vercel.app/:path*"
-    }
+    },
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
