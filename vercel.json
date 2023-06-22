@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://server-test-bd.vercel.app/:path*"
+      "destination": "https://express-test-server.vercel.app/:path*"
     }
   ]
 }
